@@ -35,9 +35,10 @@ SKILL_VALUE={
 class home_page(models.Model):
     name = models.CharField(max_length=50)
     category = models.TextField(default='')
+
 class media_page(models.Model):
-    cv = models.FileField(default='', upload_to='Home/media/resume')
-    my_picture = models.ImageField(default='', upload_to='Home/media/my_picture')
+    cv = models.FileField(default='', upload_to='Home/static/Home')
+    my_picture = models.ImageField(default='', upload_to='Home/static/Home/images')
 
 class contact(models.Model):
     instagram = models.URLField(null=True, blank=True)
